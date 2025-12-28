@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://222.94.222.64:7862/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://222.94.222.64:7862/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -102,3 +102,4 @@ export const authApi = {
 export default api;
 
 
+
