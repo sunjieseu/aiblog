@@ -1,0 +1,16 @@
+openssl req -x509 -newkey rsa:2048 -nodes -keyout /etc/caddy/certs/selfsigned.key -out /etc/caddy/certs/selfsigned.crt -days 365 -subj "/CN=222.94.222.64"
+
+
+
+https://222.94.222.64 {
+    root * /usr/share/caddy
+    file_server
+
+    tls /etc/caddy/certs/selfsigned.crt /etc/caddy/certs/selfsigned.key
+
+    reverse_proxy /api/* 127.0.0.1:7862
+}
+
+
+
+sudo systemctl restart caddy
