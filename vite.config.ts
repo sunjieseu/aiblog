@@ -22,5 +22,5 @@ export default defineConfig({
     },
   },
   //base: '/gitee_io/',
-  base: './aiblog',
+  base: '/aiblog',
 })
